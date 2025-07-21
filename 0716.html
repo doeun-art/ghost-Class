@@ -30,7 +30,7 @@
             border-radius: 12px;
             margin: 100px auto 0; /* top left right bottom */
             padding: 6px 16px; /* top, bottom  left,right */
-            display: flex;
+            display: none;
             align-items: flex-end; /* 교차 축 정렬 */
             gap: 20px;
             justify-content: center; /* 메인 축 정렬 */
@@ -64,9 +64,23 @@
             background-color: transparent;
             border: none;
         }
+
+        .btn-container button {
+            background-color: #fff;
+            border: 1px solid #333;
+            height: 42px;
+            padding: 0 20px;
+        }
     </style>
 </head>
+
 <body>
+    <div class="btn-container" title="팝업버튼을 클릭해보세요">
+    <button type="button" onclick="modalPopup()">모달팝업띄우기</button>
+    <button type="button" onclick="alertPopup()">Alert띄우기</button>
+    <button type="button" onclick="confirmPopup()">confirm띄우기</button>
+    </div>
+
     <div class="container">
         <button type="button" class="editBtn">Edit</button>
         <button type="button">
@@ -81,5 +95,17 @@
     </div>
 
     <a href="#" class="btnTop">TOP</a>
+    <script>
+        function alertPopup() {
+            alert('이것은 경고창입니다. 얼럿창')
+        }
+        function confirmPopup() {
+            alert('이름을 입력하세요')
+        }
+        function modalPopup() {
+            const el = document.querySelector('.container')
+            el.style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
