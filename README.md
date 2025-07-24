@@ -18,3 +18,5 @@
 - 앱의 기능별 Flow를 그려보면서 와이어프레임 만들어보기 (to do list : 작성, 수정, 삭제, 보기) -> CRUD
 C (create), R (read), U (update), D (delete) + List
 - Component 다양하게 연습하기 
+
+// add -> commit -> push
